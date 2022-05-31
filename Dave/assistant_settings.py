@@ -62,7 +62,7 @@ async def join_chat(c: Client, m: Message):
 
 
 @Client.on_message(
-    command(["غادر", f"Songsleave@{BOT_USERNAME}"]) & other_filters
+    command(["غادر", f"siiiileave@{BOT_USERNAME}"]) & other_filters
 )
 @check_blacklist()
 @authorized_users_only
@@ -87,19 +87,19 @@ async def leave_all(c: Client, message: Message):
         return
     run_1 = 0
     run_2 = 0
-    msg = await message.reply("🔄 Songs started leaving all groups")
+    msg = await message.reply("🔄 siiii started leaving all groups")
     async for dialog in user.iter_dialogs():
         try:
             await user.leave_chat(dialog.chat.id)
             await remove_active_chat(dialog.chat.id)
             run_1 += 1
             await msg.edit(
-                f"Songs leaving...\n\nLeft from: {run_1} chats.\nFailed in: {run_2} chats."
+                f"siiii leaving...\n\nLeft from: {run_1} chats.\nFailed in: {run_2} chats."
             )
         except Exception:
             run_2 += 1
             await msg.edit(
-                f"Songs leaving...\n\nLeft from: {run_1} chats.\nFailed in: {run_2} chats."
+                f"siiii leaving...\n\nLeft from: {run_1} chats.\nFailed in: {run_2} chats."
             )
         await asyncio.sleep(0.7)
     await msg.delete()
