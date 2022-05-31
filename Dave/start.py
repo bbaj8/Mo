@@ -2,18 +2,18 @@
 Video + Music Stream Telegram Bot
 Copyright (c) 2022-present levina=lab <https://github.com/levina-lab>
 
-This Dave is free software: you can redistribute it and/or modify
+This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-This Dave is distributed in the hope that it will be useful,
+This program is distributed in the hope that it will be useful,
 but without any warranty; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this Dave. If not, see <https://www.gnu.org/licenses/licenses.html>
+along with this program. If not, see <https://www.gnu.org/licenses/licenses.html>
 """
 
 
@@ -32,7 +32,7 @@ from config import (
     UPDATES_CHANNEL,
 )
 
-from Dave import __version__, LOGS
+from program import __version__, LOGS
 from pytgcalls import (__version__ as pytover)
 
 from driver.filters import command
@@ -87,7 +87,7 @@ async def start_(c: Client, message: Message):
         f"""ههݪاެ حبيب {message.from_user.mention()} ❤️‍🔥\n
 اެناެ بَۅت بَمميࢪ࣪اެتَ متَعدَدةَ ݪتشغِيݪ اެݪاغاެنِي فَي اެݪمَجمَۅعاتَ 🥇.
 
--› MᥲᎥꪀƚᥲᎥꪀᥱძ ხy -› [S᥆ᥙrᥴᥱ Frᥱᥱძ᥆ꪔ](http://t.me/AIIPM)
+-› MᥲᎥꪀƚᥲᎥꪀᥱძ ხy -› [S᥆ᥙrᥴᥱ Frᥱᥱძ᥆ꪔ](http://t.me/R125R)
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -184,7 +184,7 @@ async def new_chat(c: Client, m: Message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("-› قناة السورس", url=f"https://t.me/AIIPM"),
+                                InlineKeyboardButton("-› قناة السورس", url=f"https://t.me/R125R"),
                                 InlineKeyboardButton("-› الاوامر", callback_data="command_list")
                             ],[
                                 InlineKeyboardButton("-› حساب المساعد", url=f"https://t.me/{me_user.username}")

@@ -2,18 +2,18 @@
 Video + Music Stream Telegram Bot
 Copyright (c) 2022-present levina=lab <https://github.com/levina-lab>
 
-This Dave is free software: you can redistribute it and/or modify
+This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-This Dave is distributed in the hope that it will be useful,
+This program is distributed in the hope that it will be useful,
 but without any warranty; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this Dave. If not, see <https://www.gnu.org/licenses/licenses.html>
+along with this program. If not, see <https://www.gnu.org/licenses/licenses.html>
 """
 
 
@@ -27,7 +27,7 @@ from git.exc import InvalidGitRepositoryError
 from pyrogram.types import Message
 from pyrogram import Client, filters
 
-from Dave import LOGS
+from program import LOGS
 from config import UPSTREAM_REPO, BOT_USERNAME
 
 from driver.filters import command
