@@ -2,18 +2,18 @@
 Video + Music Stream Telegram Bot
 Copyright (c) 2022-present levina=lab <https://github.com/levina-lab>
 
-This program is free software: you can redistribute it and/or modify
+This Dave is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-This program is distributed in the hope that it will be useful,
+This Dave is distributed in the hope that it will be useful,
 but without any warranty; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/licenses.html>
+along with this Dave. If not, see <https://www.gnu.org/licenses/licenses.html>
 """
 
 
@@ -21,8 +21,8 @@ import asyncio
 
 from config import BOT_USERNAME, SUDO_USERS
 
-from program import LOGS
-from program.utils.function import get_calls
+from Dave import LOGS
+from Dave.utils.function import get_calls
 
 from driver.queues import QUEUE
 from driver.core import user, me_bot
@@ -62,7 +62,7 @@ async def join_chat(c: Client, m: Message):
 
 
 @Client.on_message(
-    command(["غادر", f"dicleave@{BOT_USERNAME}"]) & other_filters
+    command(["غادر", f"siiiileave@{BOT_USERNAME}"]) & other_filters
 )
 @check_blacklist()
 @authorized_users_only
@@ -87,19 +87,19 @@ async def leave_all(c: Client, message: Message):
         return
     run_1 = 0
     run_2 = 0
-    msg = await message.reply("🔄 dic started leaving all groups")
+    msg = await message.reply("🔄 siiii started leaving all groups")
     async for dialog in user.iter_dialogs():
         try:
             await user.leave_chat(dialog.chat.id)
             await remove_active_chat(dialog.chat.id)
             run_1 += 1
             await msg.edit(
-                f"dic leaving...\n\nLeft from: {run_1} chats.\nFailed in: {run_2} chats."
+                f"siiii leaving...\n\nLeft from: {run_1} chats.\nFailed in: {run_2} chats."
             )
         except Exception:
             run_2 += 1
             await msg.edit(
-                f"dic leaving...\n\nLeft from: {run_1} chats.\nFailed in: {run_2} chats."
+                f"siiii leaving...\n\nLeft from: {run_1} chats.\nFailed in: {run_2} chats."
             )
         await asyncio.sleep(0.7)
     await msg.delete()
